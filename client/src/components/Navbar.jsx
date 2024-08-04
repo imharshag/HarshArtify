@@ -1,6 +1,7 @@
 import React from 'react';
-import { AddRounded } from "@mui/icons-material";
+import { AddCircleRounded,  ExploreSharp } from "@mui/icons-material";
 import styled from "styled-components";
+import {useNavigate,useLocation} from "react-router-dom";
 import Button from "./button";
 
 const Container = styled.div`
@@ -21,17 +22,27 @@ const Container = styled.div`
 `;
 
 const GradientText = styled.span`
-  background: linear-gradient(135deg, white, pink, #BF00FF); /* Vibrant purple */
+  background: linear-gradient(135deg, white, pink, #BF00FF); 
   background-clip: text;
   color: transparent;
-  font-size: 22px; /* Match font size for consistency */
+  font-size: 22px; 
 `;
 
 const Navbar = () => {
+  const navigate=useNavigate();
+  const location=useLocation();
+  const path=location.pathname.split("/");
   return (
     <Container>
       <GradientText>HarshArtify©</GradientText>
-      <Button text="Create your Art" leftIcon={<AddRounded style={{ fontSize: "18px" }} />} />
+      {path[1]==="post"?
+      (
+        <Button onClick={()=>navigate("/")} text="Explore" leftIcon={<ExploreSharp style={{ fontSize: "18px" }} />} />
+      ):
+        (
+          <Button onClick={()=>navigate("/post")} text="Generate" leftIcon={<AddCircleRounded style={{ fontSize: "18px" }} />} />
+        )
+      }
     </Container>
   );
 };

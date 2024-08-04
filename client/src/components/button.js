@@ -20,6 +20,7 @@ const Button = styled.div`
   border-image-slice: 1;
   border-width: 2px;
   border-image-source: linear-gradient(to right, white, pink, purple);
+
   @media (max-width: 600px) {
     padding: 8px 12px;
   }
@@ -27,20 +28,26 @@ const Button = styled.div`
   ${({ isDisabled }) =>
     isDisabled &&
     `
-  opacity: 0.4;
-  cursor: not-allowed;
+    opacity: 0.4;
+    cursor: not-allowed;
   `}
+
   ${({ isLoading }) =>
     isLoading &&
     `
     opacity: 0.8;
-  cursor: not-allowed;
-`}
+    cursor: not-allowed;
+  `}
+
   ${({ flex }) =>
     flex &&
     `
     flex: 1;
-`}
+  `}
+
+  &:hover {
+    transform: scale(0.95); /* Make the button slightly smaller */
+  }
 `;
 
 const ButtonComponent = ({
@@ -61,7 +68,7 @@ const ButtonComponent = ({
     >
       {isLoading && (
         <CircularProgress
-          style={{ width: "18px", height: "18px", color: "inherit" }}
+          style={{ width: "16px", height: "10px", color: "inherit" }}
         />
       )}
       {leftIcon}
