@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://harshartify.onrender.com/api/",
+  baseURL: "", //Add your server address such as render
 });
 
 export const GetPosts = async () => await API.get("/post/");
