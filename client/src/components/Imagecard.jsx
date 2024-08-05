@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {LazyLoadImage} from "react-lazy-load-image-component";
 import { Avatar } from '@mui/material';
 import DownloadingRoundedIcon from '@mui/icons-material/DownloadingRounded';
-import {FileSaver} from "file-saver";
+import FileSaver from "file-saver";
 
 const Card = styled.div`
   position: relative;
@@ -12,15 +12,18 @@ const Card = styled.div`
   box-shadow: 1px 2px 40px 8px ${({ theme }) => theme.black + 60};
   cursor: pointer;
   transition: all 0.3s ease;
+
   &:hover {
-    box-shadow: 1px 2px 40px 8px ${({ theme }) => theme.black + 80};
-    scale: 1.05;
+    box-shadow: 1px 2px 50px 15px ${({ theme }) => theme.white + 40}; 
+    transform: scale(1.05); /* Use 'transform' for scaling */
   }
+
   &:nth-child(7n + 1) {
-    grid-column: auto/span 2;
-    grid-row: auto/span 2;
+    grid-column: auto / span 2;
+    grid-row: auto / span 2;
   }
 `;
+
 
 const HoverOverlay = styled.div`
   opacity: 0;
@@ -59,12 +62,12 @@ const Author = styled.div`
   color: ${({ theme }) => theme.white};
 `;
 
-const Imagecard = (item) => {
+const Imagecard = ({item}) => {
   return (
     <Card>
-            <LazyLoadImage src="https://w0.peakpx.com/wallpaper/261/268/HD-wallpaper-madara-iphone-laptop-mobile-madara-8k-thumbnail.jpg" />
+            <LazyLoadImage alt={item?.prompt} style={{borderRadius:"12px"}} width="100%" src={item?.photo} />
             <HoverOverlay>
-                <Prompt>Prompt</Prompt>
+                <Prompt></Prompt>
                 <div
                     style={{
                     width: "100%",
@@ -74,8 +77,8 @@ const Imagecard = (item) => {
                     }}
                     >
                 <Author>
-                <Avatar sx={{width:"32px" ,height:"32px"}}>R</Avatar>
-                Harsha
+                <Avatar sx={{width:"32px" ,height:"32px"}}></Avatar>
+                {item?.author}
                 </Author>
                 <DownloadingRoundedIcon onClick={()=> FileSaver.saveAs(item?.photo, "HarshArtify.jpg")}/>
                 </div>
