@@ -71,6 +71,10 @@ MongoDB (cluster) API, Cloudinary API, OpenAI API, and Render server API must be
       npm start
       ```
 
+### 📬 Contact
+
+If you have any questions, feedback, or collaboration inquiries, feel free to reach out [Harsha G](mailto:harshag3103@gmail.com)
+
 ### Contributing 🤝
 Feel free to contribute by opening issues or submitting pull requests. Your contributions and feedback are welcome! 📝
 
