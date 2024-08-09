@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# HarshArtify - AI image generation web app ✨
+Harshartify is an AI-powered image generation web application designed to bring your creative visions to life. Using OpenAI's advanced models for image generation and Cloudinary for efficient storage, this app combines React, Express, Node.js, and MongoDB for a seamless and scalable solution.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Setup Note 📌
 
-## Available Scripts
+MongoDB (cluster) API, Cloudinary API, OpenAI API, and Render server API must be created and added to the `.env` file located in the `server` folder before hosting.
 
-In the project directory, you can run:
+![Preview](https://harshag.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fharshartify.eecdadaa.png&w=1080&q=75)
 
-### `npm start`
+### Features 🌟
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **AI Image Generation:** Create stunning images from text prompts using OpenAI's API. 🎨
+- **Image Storage:** Store and manage images securely and efficiently with Cloudinary. ☁️
+- **Full-Stack Architecture:** Frontend with React, backend with Express and Node.js, and data storage with MongoDB. 🔄
+- **Deployment:** Smooth and reliable performance with Render (backend) and Netlify (frontend). 🚀
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Technologies Used 🛠️
 
-### `npm test`
+- **Frontend:** React
+- **Backend:** Express, Node.js
+- **Database:** MongoDB
+- **Image Generation:** OpenAI API
+- **Image Storage:** Cloudinary
+- **Hosting:** Render (backend), Netlify (frontend)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation 🔧
 
-### `npm run build`
+1. **Clone the repository:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    ```bash
+    git clone https://github.com/your-username/harshartify.git
+    ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Navigate to the project directory:**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    ```bash
+    cd harshartify
+    ```
 
-### `npm run eject`
+3. **Install dependencies for both the frontend and backend:**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    - For the frontend:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+      ```bash
+      cd client
+      npm install
+      ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    - For the backend:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+      ```bash
+      cd ../server
+      npm install
+      ```
 
-## Learn More
+4. **Set up environment variables for OpenAI and Cloudinary in `.env` files.**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. **Start the application:**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    - For the backend:
 
-### Code Splitting
+      ```bash
+      cd server
+      npm start
+      ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    - In a separate terminal, run:
 
-### Analyzing the Bundle Size
+      ```bash
+      cd client
+      npm start
+      ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Contributing 🤝
+Feel free to contribute by opening issues or submitting pull requests. Your contributions and feedback are welcome! 📝
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### License 📜
+This project is licensed under the MIT License
