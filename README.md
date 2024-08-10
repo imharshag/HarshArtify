@@ -1,4 +1,4 @@
-# HarshArtify - AI image generation web app ✨
+# HarshArtify - AI-Powered Image Generation Application ✨
 Harshartify is an AI-powered image generation web application designed to bring your creative visions to life. Using OpenAI's advanced models for image generation and Cloudinary for efficient storage, this app combines React, Express, Node.js, and MongoDB for a seamless and scalable solution.
 
 ### Warning ⚠️
