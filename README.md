@@ -1,11 +1,17 @@
 # HarshArtify - AI image generation web app ✨
 Harshartify is an AI-powered image generation web application designed to bring your creative visions to life. Using OpenAI's advanced models for image generation and Cloudinary for efficient storage, this app combines React, Express, Node.js, and MongoDB for a seamless and scalable solution.
 
-### Setup Note 📌
+### Warning ⚠️
+Please be aware that the live demo does not generate or store images due to API balance limitations. The application requires sufficient balance for OpenAI and other APIs to function fully. The demo may not show live image generation or storage.
 
+### Setup Note 📌
 MongoDB (cluster) API, Cloudinary API, OpenAI API, and Render server API must be created and added to the `.env` file located in the `server` folder before hosting.
 
 ![Preview](https://harshag.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fharshartify.eecdadaa.png&w=1080&q=75)
+
+### Demo 🎥
+
+Check out the live demo of Harshartify: [Harshartify Demo](https://harshartify.netlify.app/)
 
 ### Features 🌟
 
